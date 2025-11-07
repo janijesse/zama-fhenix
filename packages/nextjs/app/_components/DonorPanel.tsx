@@ -228,9 +228,20 @@ export const DonorPanel = () => {
           <div className={sectionClass}>
             <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between mb-4">
               <div>
+              {/* ensure extra paw prints around the page edges to match AdminPanel */}
+              <div className="absolute top-4 right-4 pointer-events-none opacity-20">
+                <PawPrintSvg className="w-24 h-24" />
+              </div>
+              <div className="absolute bottom-6 left-6 pointer-events-none opacity-18">
+                <PawPrintSvg className="w-20 h-20" />
+              </div>
                 <h3 className={titleClass}>❤️ Make a Donation</h3>
                 <p className="text-sm text-gray-500">Funds move in native ETH on Sepolia. No custodial steps, ever.</p>
               </div>
+                    {/* small arcade pet badge inside the donation card (decorative) */}
+                    <div className="absolute top-4 left-4 pointer-events-none opacity-40">
+                      <ArcadeDogTiny className="w-12 h-12" />
+                    </div>
               {isProcessing && (
                 <span className="inline-flex items-center gap-2 text-xs font-semibold text-[#A38025] bg-[#FFF7CC] border border-[#FFD208] px-3 py-1 rounded-full font-arcade">
                   <span className="inline-block h-2 w-2 rounded-full bg-[#A38025] animate-pulse" /> Processing…
@@ -359,6 +370,9 @@ export const DonorPanel = () => {
         <aside className="space-y-4">
           <div className={`${sectionClass} relative overflow-hidden`}>
             <div className="absolute top-0 right-0 h-20 w-20 translate-x-8 -translate-y-8 rounded-full bg-[#FFD208]/30" />
+            <div className="absolute top-6 right-6 pointer-events-none opacity-30">
+              <ArcadeDogTiny className="w-10 h-10" />
+            </div>
             <div className="absolute bottom-4 left-4 pointer-events-none opacity-30">
               <PawPrintSvg className="w-14 h-14" />
             </div>

@@ -1,3 +1,4 @@
+
 import "@fhevm/hardhat-plugin";
 import "@nomicfoundation/hardhat-chai-matchers";
 import "@nomicfoundation/hardhat-ethers";
@@ -6,16 +7,16 @@ import "@typechain/hardhat";
 import "hardhat-deploy";
 import "hardhat-gas-reporter";
 import type { HardhatUserConfig } from "hardhat/config";
-import { vars } from "hardhat/config";
 import "solidity-coverage";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 import "./tasks/accounts";
 import "./tasks/FHECounter";
 
-// Run 'npx hardhat vars setup' to see the list of variables that need to be set
-
-const MNEMONIC: string = vars.get("MNEMONIC", "test test test test test test test test test test test junk");
-const INFURA_API_KEY: string = vars.get("INFURA_API_KEY", "zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz");
+const MNEMONIC: string = process.env.MNEMONIC || "test test test test test test test test test test test junk";
+const INFURA_API_KEY: string = process.env.INFURA_API_KEY || "zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz";
 
 const config: HardhatUserConfig = {
   defaultNetwork: "hardhat",
@@ -24,7 +25,7 @@ const config: HardhatUserConfig = {
   },
   etherscan: {
     apiKey: {
-      sepolia: vars.get("ETHERSCAN_API_KEY", ""),
+      sepolia: process.env.ETHERSCAN_API_KEY || "",
     },
   },
   gasReporter: {
@@ -68,12 +69,8 @@ const config: HardhatUserConfig = {
     version: "0.8.27",
     settings: {
       metadata: {
-        // Not including the metadata hash
-        // https://github.com/paulrberg/hardhat-template/issues/31
         bytecodeHash: "none",
       },
-      // Disable the optimizer when debugging
-      // https://hardhat.org/hardhat-network/#solidity-optimizer-support
       optimizer: {
         enabled: true,
         runs: 800,

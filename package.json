@@ -75,5 +75,17 @@
       "utf-8-validate",
       "yarn"
     ]
-  }
+  },
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/janijesse/zama-fhenix.git"
+  },
+  "keywords": [],
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/janijesse/zama-fhenix/issues"
+  },
+  "homepage": "https://github.com/janijesse/zama-fhenix#readme"
 }

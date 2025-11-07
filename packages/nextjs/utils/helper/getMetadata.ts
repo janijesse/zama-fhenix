@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 const baseUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL
   ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
   : `http://localhost:${process.env.PORT || 3000}`;
-const titleTemplate = "%s | helper 2";
+const titleTemplate = "%s | RescueDAO";
 
 export const getMetadata = ({
   title,
@@ -45,6 +45,11 @@ export const getMetadata = ({
     },
     icons: {
       icon: [
+        {
+          url: "/favicon.svg",
+          sizes: "any",
+          type: "image/svg+xml",
+        },
         {
           url: "/favicon.png",
           sizes: "32x32",
