@@ -142,7 +142,19 @@ export const DonorPanel = () => {
     "w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FFD208] text-gray-900";
 
   return (
-    <div className="max-w-6xl mx-auto p-6 space-y-10 bg-gray-50 min-h-screen">
+    <div className="relative max-w-6xl mx-auto p-6 space-y-10 bg-gray-50 min-h-screen">
+      {/* subtle yellow tint + repeating paw texture behind the page */}
+      <div className="absolute inset-0 pointer-events-none -z-10">
+        <div className="absolute inset-0 bg-gradient-to-b from-[#FFF9E6] via-[#FFF3CC] to-[#F8F4E6] opacity-60" />
+        <div
+          className="absolute inset-0 bg-repeat opacity-30"
+          style={{
+            backgroundImage:
+              "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'>%3Cpath fill='%23FFD208' opacity='0.06' d='M32 44c-7 0-12 6-12 8s5 4 12 4 12-2 12-4-5-8-12-8zm-14-12c-3 0-6 3-6 6s3 6 6 6 6-3 6-6-3-6-6-6zm14-6c-3 0-6 3-6 6s3 6 6 6 6-3 6-6-3-6-6-6zm14 6c-3 0-6 3-6 6s3 6 6 6 6-3 6-6-3-6-6-6z'/%3E%3C/svg%3E\")",
+            backgroundSize: "160px 160px",
+          }}
+        />
+      </div>
       <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-[#FFD208] via-[#FFE883] to-[#FFF9D1] border border-[#F6D75A] shadow-xl">
         <div className="absolute -top-12 -left-10 h-40 w-40 rounded-full bg-white/25" />
         <div className="absolute -bottom-16 -right-6 h-44 w-44 rounded-full bg-white/20" />
