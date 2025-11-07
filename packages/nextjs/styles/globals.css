@@ -100,7 +100,12 @@
   h3,
   h4 {
     margin-bottom: 0.5rem;
-    line-height: 1;
+    line-height: 1.2;
+    font-family: "Press Start 2P", "Telegraf", ui-sans-serif, system-ui, -apple-system,
+      Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial,
+      "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
   }
 }
 
@@ -123,4 +128,14 @@
 
 .link:hover {
   opacity: 80%;
+}
+
+@layer utilities {
+  .font-arcade {
+    font-family: "Press Start 2P", "Telegraf", ui-sans-serif, system-ui, -apple-system,
+      Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial,
+      "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
 }
