@@ -152,7 +152,7 @@ export const DonorPanel = () => {
               <span role="img" aria-label="spark" className="text-lg">
                 🤝
               </span>
-              Rescue DAO Donor Hub
+              RescueDAO Donor Hub
             </span>
             {userAddress && (
               <span className="inline-flex items-center gap-2 bg-[#2D2D2D] text-[#FFD208] px-4 py-2 rounded-full border border-black/20 shadow-sm text-xs font-bold uppercase tracking-wide font-arcade">
@@ -189,7 +189,7 @@ export const DonorPanel = () => {
           <div className="absolute left-1/2 top-20 -translate-x-1/2 pointer-events-none opacity-20">
             <PawPrintSvg className="w-36 h-36" />
           </div>
-          <h1 className="mt-5 text-4xl md:text-[42px] font-extrabold tracking-tight">Rescue DAO — Donor Center</h1>
+          <h1 className="mt-5 text-4xl md:text-[42px] font-extrabold tracking-tight">RescueDAO — Donor Center</h1>
           <p className="mt-3 max-w-2xl text-base sm:text-lg text-[#3F3F3F]">
             Support verified shelters in Sepolia with a minimal, wallet-first experience. Pick a destination, choose the amount,
             and confirm directly in your wallet.

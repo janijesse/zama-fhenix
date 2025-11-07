@@ -17,6 +17,10 @@ const DappWrapper = ({ children }: { children: React.ReactNode }) => {
           href="https://api.fontshare.com/v2/css?f[]=telegraf@400,500,700&display=swap"
           rel="stylesheet"
         />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+          rel="stylesheet"
+        />
       </head>
       <body>
         <ThemeProvider enableSystem>
