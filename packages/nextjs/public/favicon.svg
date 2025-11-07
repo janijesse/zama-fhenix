@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none" role="img" aria-label="RescueDAO">
+  <rect width="64" height="64" rx="12" fill="#FFD208"/>
+  <g transform="translate(12,12)" fill="#2D2D2D">
+    <path d="M20 28c-4 0-7 3-7 4s3 2 7 2 7-1 7-2-3-4-7-4zm-8-6c-2 0-4 2-4 4s2 4 4 4 4-2 4-4-2-4-4-4zm8-4c-2 0-4 2-4 4s2 4 4 4 4-2 4-4-2-4-4-4zm8 4c-2 0-4 2-4 4s2 4 4 4 4-2 4-4-2-4-4-4z" />
+  </g>
+</svg>
