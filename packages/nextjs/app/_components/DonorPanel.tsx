@@ -143,11 +143,13 @@ export const DonorPanel = () => {
 
   return (
     <div className="relative max-w-6xl mx-auto p-6 space-y-10 bg-gray-50 min-h-screen">
+      {/* DEBUG: temporary banner to confirm DonorPanel renders */}
+      <div className="absolute top-4 left-4 z-50 px-3 py-1 rounded-full bg-red-50 text-red-800 text-xs font-semibold">DonorPanel: mounted</div>
       {/* subtle yellow tint + repeating paw texture behind the page */}
-      <div className="absolute inset-0 pointer-events-none -z-10">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#FFF9E6] via-[#FFF3CC] to-[#F8F4E6] opacity-60" />
+      <div className="absolute inset-0 pointer-events-none z-0">
+        <div className="absolute inset-0 bg-gradient-to-b from-[#FFF9E6] via-[#FFF3CC] to-[#F8F4E6] opacity-70" />
         <div
-          className="absolute inset-0 bg-repeat opacity-30"
+          className="absolute inset-0 bg-repeat opacity-40"
           style={{
             backgroundImage:
               "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'>%3Cpath fill='%23FFD208' opacity='0.06' d='M32 44c-7 0-12 6-12 8s5 4 12 4 12-2 12-4-5-8-12-8zm-14-12c-3 0-6 3-6 6s3 6 6 6 6-3 6-6-3-6-6-6zm14-6c-3 0-6 3-6 6s3 6 6 6 6-3 6-6-3-6-6-6zm14 6c-3 0-6 3-6 6s3 6 6 6 6-3 6-6-3-6-6-6z'/%3E%3C/svg%3E\")",
@@ -155,7 +157,7 @@ export const DonorPanel = () => {
           }}
         />
       </div>
-      <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-[#FFD208] via-[#FFE883] to-[#FFF9D1] border border-[#F6D75A] shadow-xl">
+  <div className="relative z-10 overflow-hidden rounded-3xl bg-gradient-to-r from-[#FFD208] via-[#FFE883] to-[#FFF9D1] border border-[#F6D75A] shadow-xl">
         <div className="absolute -top-12 -left-10 h-40 w-40 rounded-full bg-white/25" />
         <div className="absolute -bottom-16 -right-6 h-44 w-44 rounded-full bg-white/20" />
         <div className="relative px-8 py-10 text-[#2D2D2D]">
@@ -164,7 +166,7 @@ export const DonorPanel = () => {
               <span role="img" aria-label="spark" className="text-lg">
                 🤝
               </span>
-              RescueDAO Donor Hub
+              <span className="normal-case">RescueDAO</span> Donor Hub
             </span>
             {userAddress && (
               <span className="inline-flex items-center gap-2 bg-[#2D2D2D] text-[#FFD208] px-4 py-2 rounded-full border border-black/20 shadow-sm text-xs font-bold uppercase tracking-wide font-arcade">
@@ -201,7 +203,17 @@ export const DonorPanel = () => {
           <div className="absolute left-1/2 top-20 -translate-x-1/2 pointer-events-none opacity-20">
             <PawPrintSvg className="w-36 h-36" />
           </div>
-          <h1 className="mt-5 text-4xl md:text-[42px] font-extrabold tracking-tight">RescueDAO — Donor Center</h1>
+          {/* additional small arcade dogs and paw prints to match AdminPanel background */}
+          <div className="absolute -top-6 left-6 pointer-events-none opacity-18 transform -rotate-6">
+            <ArcadeDogTiny className="w-14 h-14" />
+          </div>
+          <div className="absolute bottom-10 right-6 pointer-events-none opacity-16">
+            <PawPrintSvg className="w-24 h-24" />
+          </div>
+          <div className="absolute top-28 right-4 pointer-events-none opacity-14">
+            <ArcadeDogTiny className="w-10 h-10" />
+          </div>
+          <h1 className="mt-5 text-4xl md:text-[42px] font-extrabold tracking-tight"><span className="normal-case">RescueDAO</span> — Donor Center</h1>
           <p className="mt-3 max-w-2xl text-base sm:text-lg text-[#3F3F3F]">
             Support verified shelters in Sepolia with a minimal, wallet-first experience. Pick a destination, choose the amount,
             and confirm directly in your wallet.

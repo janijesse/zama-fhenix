@@ -23,7 +23,10 @@ export default function Home() {
             <div className="relative px-8 py-12 text-[#2D2D2D]">
               <div className="inline-flex items-center gap-2 bg-white/70 backdrop-blur px-4 py-2 rounded-full border border-white/60 shadow-sm text-sm font-semibold font-arcade text-[11px]">
                 <span className="text-lg">✨</span>
-                Welcome to RescueDAO
+                <span className="flex items-center gap-2">
+                  <span className="sr-only">Welcome to RescueDAO</span>
+                  <span className="normal-case">Welcome to RescueDAO</span>
+                </span>
               </div>
               <h1 className="mt-5 text-4xl md:text-[44px] font-extrabold tracking-tight">Connect your wallet to continue</h1>
               <p className="mt-3 max-w-2xl text-base sm:text-lg text-[#3F3F3F]">

@@ -136,13 +136,13 @@ export const AdminPanel = () => {
               <span role="img" aria-label="spark" className="text-lg">
                 ⚙️
               </span>
-              RescueDAO Admin
+              <span className="normal-case">RescueDAO</span> Admin
             </span>
             <span className="inline-flex items-center gap-2 bg-[#2D2D2D] text-[#FFD208] px-4 py-2 rounded-full border border-black/20 shadow-sm text-xs font-bold uppercase tracking-wide">
               {shelters.length} shelter{shelters.length === 1 ? "" : "s"}
             </span>
           </div>
-          <h1 className="mt-5 text-4xl md:text-[42px] font-extrabold tracking-tight text-[#2D2D2D]">RescueDAO — Admin Panel</h1>
+          <h1 className="mt-5 text-4xl md:text-[42px] font-extrabold tracking-tight text-[#2D2D2D]"><span className="normal-case">RescueDAO</span> — Admin Panel</h1>
           <p className="mt-3 max-w-2xl text-base sm:text-lg text-[#3F3F3F]">
             Keep the network curated without leaving this minimal console. Add new shelters, monitor addresses, and keep the
             donation flow tidy.

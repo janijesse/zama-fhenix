@@ -289,7 +289,7 @@ export const ProtectoraPanel = () => {
               </div>
             </div>
           </div>
-          <h1 className="mt-5 text-4xl md:text-[42px] font-extrabold tracking-tight">RescueDAO — Shelter Dashboard</h1>
+          <h1 className="mt-5 text-4xl md:text-[42px] font-extrabold tracking-tight"><span className="normal-case">RescueDAO</span> — Shelter Dashboard</h1>
           <p className="mt-3 max-w-2xl text-base sm:text-lg text-[#3F3F3F]">
             Track your donation pool, showcase adoptable pets, and transfer funds to your operational wallet with a warm, friendly interface.
           </p>
